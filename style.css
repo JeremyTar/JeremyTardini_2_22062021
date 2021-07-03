@@ -1,0 +1,664 @@
+/* Police Reservia
+    Classique
+    Bold
+    Light
+*/
+
+
+
+@font-face 
+{
+    font-family: 'Policereservia';
+    src: url(Police/static/Raleway-Regular.ttf);
+}
+
+@font-face 
+{
+    font-family: 'Policereserviabold';
+    src: url(Police/static/Raleway-Bold.ttf);
+}
+
+@font-face 
+{
+    font-family: 'Policereservialight';
+    src: url(Police/static/Raleway-Light.ttf);
+}
+/* Globals */
+
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* icone stars */
+
+
+.logo
+{
+    width: 250px;
+    height: 150px;
+}
+
+.greystars
+{
+    display: flex;
+    color: rgb(200, 200, 200);
+}
+.bluestars
+{
+    display: flex;
+    color: #0065FC;
+    margin-right: 2px;
+}
+.stars
+{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+
+
+
+
+ /* ASPECT GENERAL */
+
+ body
+{
+    font-family: 'Policereservia';
+    margin: 0;
+}
+h1
+{ 
+    font-family: 'Policereserviabold';
+    margin: 0.5em;
+}
+h2
+{
+    font-family: 'Policereserviabold';
+}
+h3
+{
+    font-family: 'Policereservialight';
+    font-size: 100%;
+    margin: 1em;
+}
+strong
+{
+    font-family: 'Policereserviabold';
+    font-style: bold;
+    margin: 0;
+}
+
+a
+{
+    text-decoration: none;
+    color: black;
+}
+
+ul
+{
+    text-decoration: none;
+}
+
+/* MEDIA QUERY */
+
+
+
+
+
+
+/* Header */
+
+header
+{
+    margin: 0 2% 0 2%;
+}
+
+
+/* Nav header */
+
+nav
+{
+    font-family: 'Policereservia';
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 50px;
+    margin: 1% 0 1% 0;
+}
+
+.barrenav
+{
+    display: flex;
+}
+
+.menuinscription
+{
+    display: flex;
+    align-items: center;
+}
+
+    /* MEDIAQUERY BARRE DE NAV */
+
+    @media screen and (max-width:500px)
+    {
+        .logo
+        {
+            width: 150px;
+            height: 75px;
+        }
+        
+        .menunav
+        {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap-reverse;
+        }
+    }
+
+    @media screen and (min-width: 501px)
+    {
+
+
+        .menunav
+        {
+            width: 20%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            min-width: 350px;
+            min-height: 75px;
+        }
+    }
+
+
+        /* SECTION HEADER */
+
+/* BARRE DE RECHERCHE  */
+
+
+.barrerecherche
+{
+    width: 100%;
+    display: flex;
+    max-width: 500px;
+    min-width: none;
+    margin-top: 1%;
+}
+
+#iconlocalisation
+{
+    background-color: rgb(242, 242, 242);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 1em 0 0 1em;
+    min-height: 50px;
+    min-width: 50px;
+}
+
+.search
+{
+    border: solid;
+    font-family: 'Policereserviabold';
+    font-style: bold;
+    font-size: medium;
+    padding-left: 20px ;
+    border-color: rgb(242, 242, 242);
+    height: 50px;
+}
+
+    /* MEDIA QUERY BOUTTON RECHERCHE */
+
+    @media screen and (min-width:426px)
+    {
+        .search
+        {
+            width: 65% ;      
+        }
+
+        #iconsearch
+        {
+            display: none;
+        }
+        .recherche
+        {
+        font-family: 'Policereserviabold';
+        color: white;
+        background-color: #0065FC;
+        border-radius: 0 11px 11px 0;
+        height: 50px;
+        border: none;
+        width: 30%;
+        }
+    }
+
+    @media screen and (max-width:425px)
+    {
+        .search
+        {
+            width: 70%;
+        }
+        .recherche
+        {
+            display: none;
+        }
+        #iconsearch
+        {
+            display: flex;
+            color: white;
+            background-color: #0065FC;
+            border-radius: 0 11px 11px 0;
+            width: 65px;
+            height: 50px;
+            border: none;
+            align-items: center;
+            justify-content: space-around;
+        }
+    }
+
+
+
+/* DIV FILTRE */
+
+.barrefiltre
+{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin: 1% 0 1% 0;
+    flex-wrap: wrap;
+    box-sizing: content-box;
+    height: auto;
+}
+
+.barrefiltre h2
+{
+    margin: 10px;
+}
+.barrefiltre ul
+{
+    width: 90%;
+    display: flex;
+    list-style-type: none;
+    justify-content:flex-start ;
+    flex-wrap: wrap;
+    padding: 0;
+
+}
+.barrefiltre ul li
+{
+    display: flex;
+    border-top: solid;
+    border-right: solid;
+    border-bottom: solid;
+    justify-content: space-between;
+    align-items: center;
+    border-color: rgb(242, 242, 242);
+    border-radius: 2em 2em 2em 2em;
+    margin: 10px 10px 10px 10px;
+    height: 50px;
+}
+
+.barrefiltre ul li i
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    color: #0065FC;
+    background-color: #DEEBFF;
+    border-radius: 2em 2em 2em 2em;   
+    margin: 0;
+    padding: 1%;
+}
+
+.barrefiltre ul li input
+{
+    font-family: 'Policereserviabold';
+    border-radius: 2em 2em 2em 2em;
+    background-color: white;
+    color: #0065FC;
+    border: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+    /* MEDIA ALIGNEMENT BARRE FILTRE */
+
+    @media screen and (max-width:900px)
+    {
+        .barrefiltre
+        {
+            display: block;
+        }
+    }
+
+
+/* BARRE D'INFOS */
+
+ .barreinfo
+ {
+     border: 0.5px;
+     display: flex;
+     align-items: center;
+     margin: 1% 0 1% 0;
+ 
+ }
+
+ .rondinfo
+ {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border: solid;
+     border-radius: 2.5em 2.5em 2.5em 2.5em;
+     padding: 7px 7px 7px 7px;
+     width: 35px;
+     margin-right: 1%;
+     border-color: rgb(242, 242, 242);
+     
+ }
+ #iconinfo
+ {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     color: #0065FC;
+
+ }
+
+
+
+/* GESTION ASIDE ARTICLE */ 
+
+
+.ligne1
+{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap-reverse;
+}
+
+
+/* ARTICLE HEBERGEMENT*/
+
+@media screen and (max-width:425px)
+{
+    #hebergement
+    {
+    background-color: none;
+    }
+}
+
+@media screen and (min-width: 426px)
+{
+    #hebergement
+    {
+        background-color: rgb(242, 242, 242);
+    }    
+}
+
+#hebergement
+{
+    display: flex;
+    flex-direction: column;
+    box-sizing: content-box;
+    justify-content: space-around;
+    border-radius: 18px 18px 18px 18px;
+    max-width: 1000px;
+    width: 100%;
+}
+
+
+#hebergement h2
+{
+    margin: 10px 0 20px 10px;
+}
+.orgahebergement
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.vignettehebergement
+{
+    background-color: white;
+    border-radius: 1.5em 1.5em 1.5em 1.5em;
+    display: flex;
+    flex-direction: column;
+    box-sizing: content-box;
+    padding: 1%;
+    margin: 1%;
+}
+
+
+.photo
+{
+    display: flex;
+    justify-content: center;
+    object-fit: cover;
+    image-rendering: pixelated;
+    border-radius: 18px 18px 0 0;
+    width: 275px;
+    height: 150px;
+}
+
+
+.content
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: content-box;
+    width: 90%;
+    padding: 0;
+    margin: 0;
+}
+
+
+.content h3
+{
+    margin: 0;
+    padding: 0;
+}
+
+/* ASIDE LES PLUS POLULAIRES */
+
+aside
+{
+    background-color: rgb(242, 242, 242);
+    border-radius: 18px 18px 18px 18px;
+    width: 30%;
+    min-width: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1% 0 1% 0;
+}
+
+/* MEDIA VERSION TABLETTE */
+
+
+.titrepop
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.imgp
+{
+    display: flex;
+    object-fit: cover;
+    image-rendering: pixelated;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px 0 0 18px;
+    width: 45%;
+    height: 100%;
+
+}
+.vignettepopulaire
+{
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: white;
+    border-radius: 1.5em 1.5em 1.5em 1.5em;
+    padding: 1%;
+    margin: 1%;
+
+}
+
+.content2
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 55%;
+    padding: 1%;
+}
+.content2 h3
+{
+    margin: 0;
+}
+
+
+
+
+/* ARTICLE ACTIVITE */
+
+
+
+
+#activite
+{
+    width: 95%;
+}
+
+
+#activite strong
+{
+    align-items: center;
+    padding-bottom: 2%;
+    padding-left: 10px  ;
+}
+
+.cadreactivite
+{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2%;
+}
+
+.vignetteactivitep
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 35%;
+    padding-bottom: 1%;
+    box-shadow: 2px 2px 2px rgb(242, 242, 242);
+    border-radius: 1.5em 1.5em 1.5em 1.5em;
+}
+.vignetteactiviteg
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 1.5em 1.5em 1.5em 1.5em;
+    width: 300px;
+    height: 55%;
+    box-shadow: 2px 2px 2px rgb(242, 242, 242);
+}
+
+.activitecolonne
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: content-box;
+    align-items: center;
+    width: 300px;
+    height: 450px;
+}
+.sectionactivite
+{
+    display: flex;
+    flex-direction: column;
+    box-sizing: content-box;
+    justify-content: space-between;
+    width: 300px;
+    height: 450px;
+    box-shadow: 2px 2px 2px rgb(242, 242, 242);
+    border-radius: 1.5em 1.5em 1.5em 1.5em;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* PHOTO ACTIVITE */
+
+
+.photoactivite
+{
+display: flex;
+    object-fit: cover;
+    image-rendering: pixelated;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+/* FOOTER */
+
+footer
+{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: rgb(242, 242, 242);
+    height: 150px;
+    padding: 2% 0 2% 4%;
+}
+
+footer a
+{
+    font-family: 'Policereservialight';
+    font-size: 80%;
+}
+
+.fapropos, .fhebergement, .fassistance
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-right: 15%;
+
+}
+.hrefapropos, .hrefhebergement, .hrefassistance
+{
+    display: flex;
+    flex-direction: column;
+}

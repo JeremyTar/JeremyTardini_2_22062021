@@ -35,7 +35,7 @@
 body
 {
     font-family: 'Policereservia';
-    margin: 0;
+    margin: 0 2% 0 2%;
 }
 h1
 { 
@@ -45,6 +45,7 @@ h1
 h2
 {
     font-family: 'Policereserviabold';
+    font-size: 100%;
 }
 h3
 {
@@ -71,14 +72,7 @@ ul
 }
 
 
-/* ICONES STARS & LOGO */
-
-
-.logo
-{
-    width: 250px;
-    height: 150px;
-}
+/* ICONES STARS */
 
 .greystars
 {
@@ -100,83 +94,89 @@ ul
 }
 
 
+/* HEADER  */
 
-
- /* ASPECT GENERAL */
-
-
-/* MEDIA QUERY */
-
-
-
-
-
-
-/* Header */
-
-header
-{
-    margin: 0 2% 0 2%;
-}
 
 
 /* Nav header */
 
-nav
+
+#inscription
 {
-    font-family: 'Policereservia';
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    min-height: 50px;
-    margin: 1% 0 1% 0;
+    font-family: "Policereserviabold";
+    color: #0065FC;
 }
 
-.barrenav
-{
-    display: flex;
-}
-
-.menuinscription
-{
-    display: flex;
-    align-items: center;
-}
-
-    /* MEDIAQUERY BARRE DE NAV */
-
-    @media screen and (max-width:500px)
+@media screen and (min-width: 631px)
+{ 
+    nav
     {
-        .logo
-        {
-            width: 150px;
-            height: 75px;
-        }
-        
-        .menunav
-        {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap-reverse;
-        }
+        font-family: 'Policereservia';
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 0 0 1% 0;
     }
 
-    @media screen and (min-width: 501px)
+    #logo:nth-child(1)
     {
-
-
-        .menunav
-        {
-            width: 20%;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            min-width: 350px;
-            min-height: 75px;
-        }
+        justify-content: flex-start;
     }
 
+    nav a
+    {
+        padding: 20px;
+    }
+
+    nav a:hover
+    {
+    border-top: solid 3px #0065FC ;
+    transition: 0.3s;
+    
+}
+    .menunav
+    {
+    display: flex;
+    justify-content: flex-end;
+    }
+
+    #logo
+    {
+        width: 250px;
+        height: 150px;
+    }
+
+}
+
+@media screen and (max-width: 630px)
+{
+    nav
+    {
+        font-family: 'Policereservia';
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 1% 0;
+    }
+    #logo
+    {
+        width: 200px;
+        height: 100px;
+    }
+
+    #inscription
+    {
+        float: right;
+    }
+}
+
+@media screen and (max-width: 425px)
+{
+    #logo
+    {
+        width: 150px;
+        height: 75px;
+    }
+}
 
         /* SECTION HEADER */
 
@@ -238,6 +238,7 @@ nav
         border: none;
         width: 30%;
         }
+        
     }
 
     @media screen and (max-width:425px)
@@ -301,10 +302,19 @@ nav
     border-bottom: solid;
     justify-content: space-between;
     align-items: center;
+    box-sizing: content-box;
     border-color: rgb(242, 242, 242);
     border-radius: 2em 2em 2em 2em;
     margin: 10px 10px 10px 10px;
     height: 50px;
+}
+
+.barrefiltre ul li:hover
+{
+    flex-direction: row-reverse;
+    border-right: none;
+    border-left: solid rgb(242, 242, 242);
+    box-shadow: 0px 10px 13px -7px #0065FC, 8px 8px 14px 1px #DEEBFF;
 }
 
 .barrefiltre ul li i
@@ -318,15 +328,15 @@ nav
     background-color: #DEEBFF;
     border-radius: 2em 2em 2em 2em;   
     margin: 0;
-    padding: 1%;
+    padding: 2%;
 }
 
 .barrefiltre ul li input
 {
     font-family: 'Policereserviabold';
     border-radius: 2em 2em 2em 2em;
-    background-color: white;
     color: #0065FC;
+    background-color: white;
     border: none;
     display: flex;
     justify-content: space-around;
@@ -392,21 +402,29 @@ nav
 
 /* ARTICLE HEBERGEMENT*/
 
-@media screen and (max-width:425px)
-{
-    #hebergement
-    {
-    background-color: none;
-    }
-}
+    /* MEDIA BACKGROUND/ALIGNEMENT/SHADOWS HERBERGEMENT */
 
-@media screen and (min-width: 426px)
-{
-    #hebergement
+    @media screen and (max-width:425px)
     {
-        background-color: rgb(242, 242, 242);
-    }    
-}
+        #hebergement
+        {
+        background-color: none;
+        margin: 5px 0 5px 0;
+        }
+
+    }
+
+    @media screen and (min-width: 426px)
+    {
+        #hebergement
+        {
+            background-color: rgb(242, 242, 242);
+        }    
+    }
+
+
+
+
 
 #hebergement
 {
@@ -415,10 +433,17 @@ nav
     box-sizing: content-box;
     justify-content: space-around;
     border-radius: 18px 18px 18px 18px;
-    max-width: 1000px;
-    width: 100%;
+    width: 65%;
+    padding: 1%;
 }
 
+@media screen and (max-width:425px)
+{
+    #hebergement
+    {
+      width: 100%;  
+    }
+}
 
 #hebergement h2
 {
@@ -439,7 +464,14 @@ nav
     flex-direction: column;
     box-sizing: content-box;
     padding: 1%;
-    margin: 1%;
+    width: 30%;
+    min-width: 300px;
+    height: 30%;
+    max-height: 250px;
+
+    margin: 2% 0 2% 0;
+    box-shadow: 8px 8px 15px 0px rgba(0,0,0,0.3);
+    
 }
 
 
@@ -452,8 +484,6 @@ nav
     border-radius: 18px 18px 0 0;
     width: 100%;
     height: 70%;
-    max-width: 270px;
-    max-height: 150px;
 }
 
 .content
@@ -481,7 +511,7 @@ aside
     background-color: rgb(242, 242, 242);
     border-radius: 18px 18px 18px 18px;
     width: 100%;
-    max-width: 550px;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -498,6 +528,8 @@ aside
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    padding: 0 2% 0 2%;
 }
 
 .photopopulaire
@@ -510,22 +542,23 @@ aside
     border-radius: 18px 0 0 18px;
     width: 45%;
     max-width: 170px;
-    height: 170px;
+    height: 100%;
 
 }
 .vignettepopulaire
 {
-    height: 30%;
-    width: 95%; 
+    height: 25%;
+    width: 90%; 
     display: flex;
     flex-direction: row;
     align-items: center;
     box-sizing: content-box;
-    justify-content:space-around ;
+    justify-content:space-between ;
     background-color: white;
     border-radius: 1.5em 1.5em 1.5em 1.5em;
-    padding: 1%;
     margin: 1%;
+    -webkit-box-shadow: 8px 8px 15px 0px rgba(0,0,0,0.3); 
+    box-shadow: 8px 8px 15px 0px rgba(0,0,0,0.3);
 
 }
 
@@ -547,14 +580,12 @@ aside
 
 /* ARTICLE ACTIVITE */
 
-
-
-
 #activite
 {
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin: 2% 0 2% 0;
 }
 
 .orgaactivite
@@ -574,125 +605,132 @@ aside
     padding: 1% 1% 1% 2%;
 }
 
-/* MEDIA QUERY ADAPTATION VIGNETTE ACTIVITE SCREEN */
+    /* MEDIA QUERY ADAPTATION VIGNETTE ACTIVITE SCREEN */
 
-@media screen and (min-width: 1256px) 
-{
-        .vignetteactivitesolo
+    @media screen and (min-width: 1310px) 
     {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        height: 500px;
-        width: 20%;
-        min-width: 300px;
-        border-radius: 18px;
-        box-shadow: 2px 2px 2px;
-        margin: 5px;
+            .vignetteactivitesolo
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 500px;
+            width: 20%;
+            min-width: 300px;
+            border-radius: 18px;
+            -webkit-box-shadow: 8px 8px 15px 0px rgba(0,0,0,0.3); 
+            box-shadow: 8px 8px 15px 0px rgba(0,0,0,0.3);
+            margin: 5px;
+        }
+
+            .vignetteactivitecompose
+        {
+            display: flex;
+            flex-direction: column;
+            box-sizing: content-box;
+            justify-content: space-between;
+            height: 500px;
+            width: 20%;
+            min-width: 300px;
+            margin: 5px;
+        }
+
+
+        .vignettemoyenne
+        {
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            height: 250px;
+            width: 100%;
+            border-radius: 18px;
+            -webkit-box-shadow: 8px 8px 15px 0px rgba(0,0,0,0.3); 
+            box-shadow: 8px 8px 15px 0px rgba(0,0,0,0.3);
+        }
+
+        .vignettepetite
+        {
+            display: flex;
+            flex-direction: column;
+            height: 150px;
+            width: 100%;
+            border-radius: 18px;
+            -webkit-box-shadow: 8px 8px 15px 0px rgba(0,0,0,0.3); 
+            box-shadow: 8px 8px 15px 0px rgba(0,0,0,0.3);
+            padding-bottom: 10px;
+        }
+
+        .photoactivite1
+        {
+            object-fit: cover;
+            image-rendering: pixelated;
+            width: 100%;
+            height: 95%;
+            border-radius: 18px 18px 0 0;
+        }
+        .photoactivite2
+        {
+            object-fit: cover;
+            image-rendering: pixelated;
+            width: 100%;
+            height: 90%;
+            border-radius: 18px 18px 0 0;
+        }
+
     }
+
+    @media screen and (max-width: 1309px) 
+    {
+        .vignetteactivitesolo
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            box-sizing: content-box;
+            max-width: 350px;
+            min-width: 280px;
+            border-radius: 18px;
+            -webkit-box-shadow: 8px 8px 15px 0px rgba(0,0,0,0.3); 
+            box-shadow: 8px 8px 15px 0px rgba(0,0,0,0.3);
+            margin: 5px;
+            padding-bottom: 10px;
+        }
 
         .vignetteactivitecompose
-    {
-        display: flex;
-        flex-direction: column;
-        box-sizing: content-box;
-        justify-content: space-between;
-        height: 500px;
-        width: 20%;
-        min-width: 300px;
-        margin: 5px;
-    }
+        {
+            display: flex;
+            flex-wrap: wrap;
+            box-sizing: content-box;
+            justify-content: space-around;
+            margin: 5px;
+        }
 
+        .vignettepetite, .vignettemoyenne
+        {
+            display: flex;
+            flex-direction: column;
+            height: 150px;
+            max-width: 350px;
+            min-width: 280px;
+            border-radius: 18px;
+            -webkit-box-shadow: 8px 8px 15px 0px rgba(0,0,0,0.3); 
+            box-shadow: 8px 8px 15px 0px rgba(0,0,0,0.3);
+            margin: 5px;
+            padding-bottom: 15px;
 
-    .vignettemoyenne
-    {
-        display: flex;
-        flex-direction: column;
-        box-sizing: border-box;
-        height: 250px;
-        width: 100%;
-        border-radius: 18px;
-        box-shadow: 2px 2px 2px;
-    }
+        }
 
-    .vignettepetite
-    {
-        display: flex;
-        flex-direction: column;
-        height: 150px;
-        width: 100%;
-        border-radius: 18px;
-        box-shadow: 2px 2px 2px;
-        padding-bottom: 10px;
-    }
-
-    .photoactivite1
-    {
-        object-fit: cover;
-        image-rendering: pixelated;
-        width: 100%;
-        height: 95%;
-        border-radius: 18px 18px 0 0;
-    }
-    .photoactivite2
-    {
-        object-fit: cover;
-        image-rendering: pixelated;
-        width: 100%;
-        height: 90%;
-        border-radius: 18px 18px 0 0;
-    }
-
-}
-
-@media screen and (max-width: 1255px) 
-{
-    .vignetteactivitesolo
-    {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        height: 150px;
-        width: 20%;
-        min-width: 300px;
-        border-radius: 18px;
-        box-shadow: 2px 2px 2px;
-        margin: 5px;
-        padding-bottom: 10px;
-    }
-
-    .vignetteactivitecompose
-    {
-        display: flex;
-        flex-wrap: wrap;
-        box-sizing: content-box;
-        justify-content: space-around;
-        margin: 5px;
-    }
-
-    .vignettepetite, .vignettemoyenne
-    {
-        display: flex;
-        flex-direction: column;
-        height: 150px;
-        width: 300px;
-        border-radius: 18px;
-        box-shadow: 2px 2px 2px;
-        margin: 5px;
-        padding-bottom: 15px;
+        .photoactivite2, .photoactivite1
+        {
+            object-fit: cover;
+            image-rendering: pixelated;
+            width: 100%;
+            height: 90%;
+            max-height: 120px;
+            border-radius: 18px 18px 0 0;
+        }
 
     }
-
-    .photoactivite2, .photoactivite1
-    {
-        object-fit: cover;
-        image-rendering: pixelated;
-        width: 100%;
-        height: 90%;
-        border-radius: 18px 18px 0 0;
-    }
-
-}
 
 
 

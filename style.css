@@ -23,48 +23,16 @@
     font-family: 'Policereservialight';
     src: url(Police/static/Raleway-Light.ttf);
 }
-/* Globals */
+
+
+/* Globals et ASPECT GENERAL */
 
 *
 {
     box-sizing: border-box;
     margin: 0;
 }
-
-/* icone stars */
-
-
-.logo
-{
-    width: 250px;
-    height: 150px;
-}
-
-.greystars
-{
-    display: flex;
-    color: rgb(200, 200, 200);
-}
-.bluestars
-{
-    display: flex;
-    color: #0065FC;
-    margin-right: 2px;
-}
-.stars
-{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    
-}
-
-
-
-
- /* ASPECT GENERAL */
-
- body
+body
 {
     font-family: 'Policereservia';
     margin: 0;
@@ -101,6 +69,41 @@ ul
 {
     text-decoration: none;
 }
+
+
+/* ICONES STARS & LOGO */
+
+
+.logo
+{
+    width: 250px;
+    height: 150px;
+}
+
+.greystars
+{
+    display: flex;
+    color: rgb(200, 200, 200);
+}
+.bluestars
+{
+    display: flex;
+    color: #0065FC;
+    margin-right: 2px;
+}
+.stars
+{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+
+
+
+
+ /* ASPECT GENERAL */
+
 
 /* MEDIA QUERY */
 
@@ -449,10 +452,9 @@ nav
     border-radius: 18px 18px 0 0;
     width: 100%;
     height: 70%;
-    max-width: 275px;
-    max-height: 200px;
+    max-width: 270px;
+    max-height: 150px;
 }
-
 
 .content
 {
@@ -478,14 +480,14 @@ aside
 {
     background-color: rgb(242, 242, 242);
     border-radius: 18px 18px 18px 18px;
-    width: 30%;
-    min-width: 320px;
-    max-width: 500px;
+    width: 100%;
+    max-width: 550px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    padding: 1% 0 1% 0;
+    box-sizing: content-box;
+    padding: 1%;
 }
 
 /* MEDIA VERSION TABLETTE */
@@ -507,18 +509,19 @@ aside
     justify-content: center;
     border-radius: 18px 0 0 18px;
     width: 45%;
-    height: 100%;
     max-width: 170px;
-    max-height: 170px;
+    height: 170px;
 
 }
 .vignettepopulaire
 {
     height: 30%;
-    width: 85%;
+    width: 95%; 
     display: flex;
     flex-direction: row;
+    align-items: center;
     box-sizing: content-box;
+    justify-content:space-around ;
     background-color: white;
     border-radius: 1.5em 1.5em 1.5em 1.5em;
     padding: 1%;
@@ -549,91 +552,147 @@ aside
 
 #activite
 {
+    display: flex;
+    flex-direction: column;
     width: 100%;
 }
 
-
-#activite strong
-{
-    align-items: center;
-    padding-bottom: 2%;
-    padding-left: 10px  ;
-}
-
-.cadreactivite
+.orgaactivite
 {
     display: flex;
     justify-content: space-around;
-    margin-top: 2%;
-}
-
-.vignetteactivitep
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 35%;
-    padding-bottom: 1%;
-    box-shadow: 2px 2px 2px rgb(242, 242, 242);
-    border-radius: 1.5em 1.5em 1.5em 1.5em;
-}
-.vignetteactiviteg
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border-radius: 1.5em 1.5em 1.5em 1.5em;
-    width: 300px;
-    height: 55%;
-    box-shadow: 2px 2px 2px rgb(242, 242, 242);
-}
-
-.activitecolonne
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     box-sizing: content-box;
     align-items: center;
-    width: 300px;
-    height: 450px;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 10px 0 10px 0;
 }
-.sectionactivite
+
+
+.vignetteactivitesolo strong, .vignettemoyenne strong, .vignettepetite strong
 {
-    display: flex;
-    flex-direction: column;
-    box-sizing: content-box;
-    justify-content: space-between;
-    width: 300px;
-    height: 450px;
-    box-shadow: 2px 2px 2px rgb(242, 242, 242);
-    border-radius: 1.5em 1.5em 1.5em 1.5em;
-
+    padding: 1% 1% 1% 2%;
 }
 
+/* MEDIA QUERY ADAPTATION VIGNETTE ACTIVITE SCREEN */
 
-
-
-
-
-
-
-
-
-
-
-/* PHOTO ACTIVITE */
-
-
-.photoactivite
+@media screen and (min-width: 1256px) 
 {
-display: flex;
-    object-fit: cover;
-    image-rendering: pixelated;
-    align-items: center;
-    justify-content: center;
+        .vignetteactivitesolo
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 500px;
+        width: 20%;
+        min-width: 300px;
+        border-radius: 18px;
+        box-shadow: 2px 2px 2px;
+        margin: 5px;
+    }
+
+        .vignetteactivitecompose
+    {
+        display: flex;
+        flex-direction: column;
+        box-sizing: content-box;
+        justify-content: space-between;
+        height: 500px;
+        width: 20%;
+        min-width: 300px;
+        margin: 5px;
+    }
+
+
+    .vignettemoyenne
+    {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        height: 250px;
+        width: 100%;
+        border-radius: 18px;
+        box-shadow: 2px 2px 2px;
+    }
+
+    .vignettepetite
+    {
+        display: flex;
+        flex-direction: column;
+        height: 150px;
+        width: 100%;
+        border-radius: 18px;
+        box-shadow: 2px 2px 2px;
+        padding-bottom: 10px;
+    }
+
+    .photoactivite1
+    {
+        object-fit: cover;
+        image-rendering: pixelated;
+        width: 100%;
+        height: 95%;
+        border-radius: 18px 18px 0 0;
+    }
+    .photoactivite2
+    {
+        object-fit: cover;
+        image-rendering: pixelated;
+        width: 100%;
+        height: 90%;
+        border-radius: 18px 18px 0 0;
+    }
+
 }
 
+@media screen and (max-width: 1255px) 
+{
+    .vignetteactivitesolo
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 150px;
+        width: 20%;
+        min-width: 300px;
+        border-radius: 18px;
+        box-shadow: 2px 2px 2px;
+        margin: 5px;
+        padding-bottom: 10px;
+    }
+
+    .vignetteactivitecompose
+    {
+        display: flex;
+        flex-wrap: wrap;
+        box-sizing: content-box;
+        justify-content: space-around;
+        margin: 5px;
+    }
+
+    .vignettepetite, .vignettemoyenne
+    {
+        display: flex;
+        flex-direction: column;
+        height: 150px;
+        width: 300px;
+        border-radius: 18px;
+        box-shadow: 2px 2px 2px;
+        margin: 5px;
+        padding-bottom: 15px;
+
+    }
+
+    .photoactivite2, .photoactivite1
+    {
+        object-fit: cover;
+        image-rendering: pixelated;
+        width: 100%;
+        height: 90%;
+        border-radius: 18px 18px 0 0;
+    }
+
+}
 
 
 
@@ -642,13 +701,13 @@ display: flex;
 footer
 {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: flex-start;
+    box-sizing: content-box;
     background-color: rgb(242, 242, 242);
-    height: 150px;
     padding: 2% 0 2% 4%;
 }
-
 footer a
 {
     font-family: 'Policereservialight';

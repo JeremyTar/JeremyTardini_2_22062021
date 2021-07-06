@@ -97,7 +97,7 @@ header
     margin: 0 2% 0 2%;
 }
 /* Nav header */
-#logo
+.logo
 {
     width: 250px;
     height: 150px;
@@ -232,7 +232,6 @@ header
 {
     border: solid;
     font-family: 'Policereserviabold';
-    font-style: bold;
     font-size: medium;
     padding-left: 20px ;
     border-color: rgb(242, 242, 242);
@@ -431,7 +430,6 @@ header
     {
         #hebergement
         {
-        background-color: none;
         margin: 5px 0 5px 0;
         }
 

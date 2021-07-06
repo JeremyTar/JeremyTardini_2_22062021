@@ -33,12 +33,10 @@
 body
 {
     font-family: 'Policereservia';
-    margin: 0 2% 0 2%;
 }
 h1
 { 
     font-family: 'Policereserviabold';
-    margin: 0 2% 0 2%;
 }
 h2
 {
@@ -49,12 +47,11 @@ h3
 {
     font-family: 'Policereservialight';
     font-size: 100%;
-    margin: 0;
+    margin: 5px 0 0 0;
 }
 strong
 {
     font-family: 'Policereserviabold';
-    margin: 0;
 }
 a
 {
@@ -91,7 +88,10 @@ ul
 
 
 /* HEADER  */
-
+header
+{
+    margin: 0 2% 0 2%;
+}
 /* Nav header */
 #logo
 {
@@ -117,7 +117,6 @@ ul
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin: 0 2% 0 2%;
     }
     .menunavdesktop
     {
@@ -150,7 +149,6 @@ ul
     {
         display: flex;
         flex-direction: column;
-        margin: 0 2% 0 2%;
     }
 
     .logoinscriptionmobile
@@ -204,18 +202,13 @@ ul
 
 /* BARRE DE RECHERCHE  */
 
-header h1
-{
-    margin: 10px 0 10px 0;
-}
-
 .barrerecherche
 {
     width: 100%;
     display: flex;
     max-width: 500px;
-    min-width: none;
-    margin: 10px 0 10px 0;
+    min-width: 300px;
+    margin: 15px 0 0 0;
 
 }
 
@@ -297,31 +290,27 @@ header h1
 
 /* DIV FILTRE */
 
+/* Aspect général barre filtre */
+
 .barrefiltre
 {
     display: flex;
-    width: 100%;
     align-items: center;
-    margin: 10px 0 10px 0;
+    align-content: center;
     flex-wrap: wrap;
     box-sizing: content-box;
-    height: auto;
+    margin: 10px 0 10px 0;
 }
 
-.barrefiltre h2
-{
-    margin-right: 10px;
-}
 .barrefiltre ul
 {
     width: 90%;
     display: flex;
     list-style-type: none;
-    justify-content:flex-start ;
     flex-wrap: wrap;
     padding: 0;
-
 }
+
 .barrefiltre ul li
 {
     display: flex;
@@ -336,7 +325,6 @@ header h1
     margin: 10px 10px 10px 10px;
     height: 50px;
 }
-
 .barrefiltre ul li:hover
 {
     flex-direction: row-reverse;
@@ -358,7 +346,6 @@ header h1
     margin: 0;
     padding: 2%;
 }
-
 .barrefiltre ul li input
 {
     font-family: 'Policereserviabold';
@@ -372,14 +359,6 @@ header h1
 
 
     /* MEDIA ALIGNEMENT BARRE FILTRE */
-
-    @media screen and (max-width:900px)
-    {
-        .barrefiltre
-        {
-            display: block;
-        }
-    }
 
 /* BARRE D'INFOS */
 
@@ -421,9 +400,10 @@ header h1
 .ligne1
 {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap-reverse;
 }
+
 
 
 /* ARTICLE HEBERGEMENT*/
@@ -471,6 +451,8 @@ header h1
         }
     }
 
+
+
 #hebergement h2
 {
     margin: 10px 0 20px 10px;
@@ -500,7 +482,6 @@ header h1
 
  /* PHOTO CONTENT HEBERGEMENT SIZING */
 
-
 .photo
 {
     display: flex;
@@ -528,6 +509,8 @@ header h1
     margin: 0;
     padding: 0;
 }
+
+
 
 /* ASIDE LES PLUS POLULAIRES */
 
@@ -578,7 +561,6 @@ aside
     border-radius: 1.5em 1.5em 1.5em 1.5em;
     margin: 1%;
     box-shadow: 8px 8px 15px 0px rgba(0,0,0,0.3);
-
 }
 
 .titrepop
@@ -628,10 +610,13 @@ aside
 {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    margin: 2% 0 2% 0;
+    margin: 1%;
 }
 
+.titreactivite
+{
+    margin-left: 1%;
+}
 .orgaactivite
 {
     display: flex;
@@ -674,7 +659,6 @@ margin: 5px;
     box-shadow: 8px 8px 15px 0px rgba(0,0,0,0.3);
 }
     /* MEDIA QUERY ADAPTATION VIGNETTE ACTIVITE SCREEN */
-
 
     @media screen and (min-width: 1310px) 
     {
@@ -765,6 +749,7 @@ margin: 5px;
         }
 
     }
+
 
 
 

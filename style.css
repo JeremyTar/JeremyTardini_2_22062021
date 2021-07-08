@@ -97,11 +97,6 @@ header
     margin: 0 2% 0 2%;
 }
 /* Nav header */
-.logo
-{
-    width: 250px;
-    height: 150px;
-}
 
 .inscription
 {
@@ -121,6 +116,11 @@ header
         display: flex;
         align-items: center;
         justify-content: space-between;
+    }
+        .logo
+    {
+        width: 250px;
+        height: 150px;
     }
     .menunavdesktop
     {

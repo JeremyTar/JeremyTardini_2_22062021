@@ -25,14 +25,12 @@
 
 /* Globals et ASPECT GENERAL */
 
-*
-{
-    box-sizing: border-box;
-    margin: 0;
-}
+
 body
 {
     font-family: 'Policereservia';
+    max-width: 2000px;
+    margin: auto;
 }
 h1
 { 
@@ -46,12 +44,13 @@ h2
 h3
 {
     font-family: 'Policereservialight';
-    font-size: 100%;
+    font-size: 90%;
     margin: 5px 0 0 0;
 }
 strong
 {
     font-family: 'Policereserviabold';
+    font-size: 90%;
 }
 span
 {
@@ -92,115 +91,107 @@ ul
 
 
 /* HEADER  */
+
+
 header
 {
     margin: 0 2% 0 2%;
 }
+
+
 /* Nav header */
 
-.inscription
+.nav__inscription
 {
     font-family: 'Policereserviabold';
     color: #0065FC;
 }
 
-@media screen and (min-width:601px)
+.logo
 {
-    .mobile
-    {
-        display: none ;   
-    }
- 
-    .desktop
-    {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-        .logo
-    {
-        width: 250px;
-        height: 150px;
-    }
-    .menunavdesktop
-    {
-        display: flex;
-        justify-content: flex-end;
-    }
-    .menunavdesktop a
-    {
-        padding: 10% 5% 5% 5%;
-    }
+    position: absolute;
+}
 
-    .desktop a:hover
-    {
-        border-top: solid 3px #0065FC;
-        transition: 0.2s;
-    }
-
-
+nav
+{
+    width: 100%;
 }
 
 
-@media screen and (max-width: 600px)
+@media screen and (min-width: 600px) 
 {
-    .desktop
+    .logo
     {
-    display: none;
+        height: 100px;
+        top : 15px;
     }
-
-    .mobile
+    nav
     {
         display: flex;
-        flex-direction: column;
-    }
-
-    .logoinscriptionmobile
-    {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
         align-items: center;
+        justify-content: flex-end;
+        height:150px;
     }
-    #logo
+    nav a
     {
-        width: 150px;
+        padding: 15px;
+    }
+    nav a:hover
+    {
+        transition: 0.3s;
+        border-top: solid 3px #0065FC;
+    }
+}
+
+@media screen and (max-width: 599px)
+{
+    .logo
+    {
         height: 75px;
+        top : 5px;
     }
-
-    .inscription
+    nav
     {
-        padding: 2%;
-    }
-
-    .inscription:hover
-    {
-    border-top: solid 3px #0065FC;
-    }
-
-    .menunavmobile
-    {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
+        height: 175px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
         align-items: center;
     }
-
-    .menunavmobile a 
+    .nav__inscription
     {
-        width: 100%;
-        padding: 20px;
+        grid-area: 1 / 2;
+        display: flex;
+        justify-self: end;
+        padding: 15px 0 0 0;
+        margin-right: 15px;
+    }
+    .nav__hebergement
+    {
+        grid-area: 2 / 1;
         display: flex;
         justify-content: center;
+        padding-bottom: 20px;
     }
-
-    .menunavmobile a:hover
+    .nav__activite
     {
-        border-bottom: solid 3px #0065FC;
+        grid-area: 2 / 2;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 20px;
     }
 
+    .nav__inscription:hover
+    {
+        border-top: solid 2px #0065FC;
+        transition: 0.3s;
+    }
+    .nav__activite:hover, .nav__hebergement:hover
+    {
+        border-bottom: solid 2px #0065FC;
+        transition: 0.3s;
+    }
 }
-
 
         /* SECTION HEADER */
 
@@ -258,7 +249,7 @@ header
         color: white;
         background-color: #0065FC;
         border-radius: 0 11px 11px 0;
-        height: 50px;
+        height: 57px;
         border: none;
         width: 30%;
         }
@@ -282,7 +273,7 @@ header
             background-color: #0065FC;
             border-radius: 0 11px 11px 0;
             width: 65px;
-            height: 50px;
+            height: 57px;
             border: none;
             align-items: center;
             justify-content: space-around;
@@ -404,13 +395,9 @@ header
 {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap-reverse;
 }
 
-
-
 /* ARTICLE HEBERGEMENT*/
-
 
 #hebergement
 {
@@ -419,18 +406,21 @@ header
     box-sizing: content-box;
     justify-content: space-around;
     border-radius: 18px 18px 18px 18px;
-    width: 65%;
     padding: 1%;
     margin: 1%;
 }
 
-    /* MEDIA BACKGROUND/ALIGNEMENT/SHADOWS HERBERGEMENT */
+    /* MEDIA BACKGROUND/ALIGNEMENT/ */
 
     @media screen and (max-width:425px)
     {
         #hebergement
         {
         margin: 5px 0 5px 0;
+        }
+        .vignettehebergement
+        {
+            max-width: 400px;
         }
 
     }
@@ -445,20 +435,48 @@ header
 
 
 
-    @media screen and (max-width: 1542px)
+    @media screen and (max-width: 1023px)
     {
+        .ligne1
+        {
+        flex-wrap: wrap-reverse;
+        }
         #hebergement
         {
         width: 100%;  
         }
+        .vignettehebergement
+        {
+            width: 100%;
+        }
+
     }
 
+    @media screen and (min-width: 1024px) 
+    {
+        #hebergement
+        {
+            width: 70%;
+        }
+        .vignettehebergement
+        {
+            width: 30%;
+        }
+    }
 
+    @media screen and (min-width:426px) and (max-width: 1023px)
+    {
+        .vignettehebergement
+        {
+            width: 350px;
+        }
+    }
 
 #hebergement h2
 {
     margin: 10px 0 20px 10px;
 }
+
 .orgahebergement
 {
     display: flex;
@@ -473,14 +491,15 @@ header
     display: flex;
     flex-direction: column;
     box-sizing: content-box;
-    padding: 0.5%;
-    width: 30%;
-    min-width: 300px;
+    padding: 0.7%;
+    min-width: 200px;
     max-height: 200px;
     margin: 2% 0 2% 0;
     box-shadow: 8px 8px 15px 0px rgba(0,0,0,0.3);
     
 }
+
+
 
  /* PHOTO CONTENT HEBERGEMENT SIZING */
 
@@ -526,34 +545,54 @@ aside
     box-sizing: content-box;
     padding: 1%;
     margin: 1%;
+
 }
     /* MEDIA DISPOSITION ASIDE */ 
 
-    @media screen and (max-width: 1542px)
+    @media screen and (max-width: 425px)
     {
         aside
         {
             flex-wrap: wrap;
+            width: 100%;
+        }
+        .vignettepopulaire
+        {
+            max-width: 400px;
+            height: 150px; 
         }
     }
 
-    @media screen and (min-width: 1543px)
+    @media screen and (min-width: 1024px)
     {
             aside
         {
-
+            width: 30%;
             flex-direction: column;
+        }
+        .vignettepopulaire
+        {
+            height: 25%; 
+        }
 
-            
+    }
+
+    @media screen and (min-width:426px) and (max-width: 1023px)
+    {
+        aside
+        {
+            flex-wrap: wrap;
+            width: 100%;
+        }
+        .vignettepopulaire
+        {
+            max-width: 350px; 
         }
     }
 
 .vignettepopulaire
 {
-    height: 25%;
-    width: 100%; 
-    max-width: 400px;
-    min-height: 150px;
+    height: 150px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -583,7 +622,7 @@ aside
     justify-content: center;
     border-radius: 18px 0 0 18px;
     width: 45%;
-    max-width: 170px;
+
     height: 100%;
 
 }
@@ -624,8 +663,6 @@ aside
     display: flex;
     justify-content: space-around;
     box-sizing: content-box;
-    align-items: center;
-    flex-wrap: wrap;
     width: 100%;
     padding: 10px 0 10px 0;
 }
@@ -662,13 +699,13 @@ margin: 5px;
 }
     /* MEDIA QUERY ADAPTATION VIGNETTE ACTIVITE SCREEN */
 
-    @media screen and (min-width: 1310px) 
+    @media screen and (min-width: 1024px) 
     {
         .vignetteactivitesolo
         {
             height: 500px;
             width: 20%;
-            min-width: 300px;
+            min-width: 240px;
 
         }
 
@@ -679,7 +716,7 @@ margin: 5px;
             justify-content: space-between;
             height: 500px;
             width: 20%;
-            min-width: 300px;
+            min-width: 240px;
             margin: 5px;
         }
         .vignettemoyenne
@@ -712,14 +749,19 @@ margin: 5px;
 
     }
 
-    @media screen and (max-width: 1309px) 
+    @media screen and (max-width: 642px) 
     {
+        .orgaactivite
+        {
+            flex-wrap: wrap;
+        }
 
         .vignetteactivitesolo
         {
             box-sizing: content-box;
-            max-width: 350px;
             min-width: 300px;
+            max-width: 400px;
+            width: 100%;
             padding-bottom: 10px;
         }
 
@@ -727,13 +769,13 @@ margin: 5px;
         {
             flex-wrap: wrap;
             justify-content: space-around;
-            margin: 5px;
         }
 
         .vignettepetite, .vignettemoyenne
         {
             height: 150px;
-            max-width: 350px;
+            width: 100%;
+            max-width: 400px;
             min-width: 300px;
             margin: 5px;
             padding-bottom: 15px;
@@ -752,6 +794,51 @@ margin: 5px;
 
     }
 
+    @media screen and (min-width: 643px) and (max-width: 1023px) 
+    {
+        .orgaactivite
+        {
+            flex-wrap: wrap;
+        }
+
+        .vignetteactivitesolo
+        {
+            box-sizing: content-box;
+            max-width: 300px;
+            width: 50%;
+            padding-bottom: 10px;
+        }
+
+        .vignetteactivitecompose
+        {
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 5px;
+        }
+
+        .vignettepetite, .vignettemoyenne
+        {
+            height: 150px;
+            width: 100%;
+            max-width: 300px;
+            margin: 5px;
+            padding-bottom: 15px;
+            width: 50%;
+
+        }
+
+        .photoactivite2, .photoactivite1
+        {
+            object-fit: cover;
+            image-rendering: pixelated;
+            width: 100%;
+            height: 90%;
+            max-height: 120px;
+            border-radius: 18px 18px 0 0;
+        }
+        
+    }
+
 
 
 
@@ -763,22 +850,8 @@ footer
     flex-wrap: wrap;
     box-sizing: content-box;
     background-color: rgb(242, 242, 242);
-}
-@media screen and (min-width: 1108px) 
-{
-    footer
-    {
     justify-content: flex-start;
-    }
-
-}
-
-@media screen and (max-width: 1107px)
-{
-    footer
-    {
-        justify-content: space-around;
-    }
+    padding-left: 20px;
 }
 
 footer h2
